@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Facilities from "./components/Facilities";
 import Contact from "./components/Contact";
-import WhatsAppButton from "./components/WhatsAppButton";
+import WhatsAppButton from "./components/WhatsappButton";
 import Gallery from "./components/Gallery";
 import AdmissionForm from "./components/AdmissionForm";
 import Footer from "./components/Footer";
@@ -16,7 +16,7 @@ function App() {
       <About />
       <Facilities />
       <Contact />
-      <WhatsAppButton />
+      <WhatsappButton />
       <Gallery />
        <AdmissionForm  />
       <Footer />
