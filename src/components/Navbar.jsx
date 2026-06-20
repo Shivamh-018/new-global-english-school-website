@@ -7,11 +7,10 @@ function Navbar() {
         </h1>
 
        <ul className="flex gap-6">
-  <li className="hover:text-yellow-300 cursor-pointer">Home</li>
-  <li className="hover:text-yellow-300 cursor-pointer">About</li>
-  <li className="hover:text-yellow-300 cursor-pointer">Admissions</li>
-  <li className="hover:text-yellow-300 cursor-pointer">Gallery</li>
-  <li className="hover:text-yellow-300 cursor-pointer">Contact</li>
+ <a href="#about">About</a>
+<a href="#facilities">Facilities</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
 </ul>
       </div>
     </nav>

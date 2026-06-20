@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import heroImage from "../assets/hero.jpg";
+
 
 function Hero() {
   return (
@@ -13,9 +15,14 @@ function Hero() {
             Admissions Open 2026-27
           </span>
 
-          <h1 className="text-5xl md:text-6xl font-bold text-white mt-6">
-           New Global English School
-          </h1>
+          <motion.h1
+  initial={{ opacity: 0, x: -100 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1 }}
+  className="text-5xl md:text-6xl font-bold text-white mt-6"
+>
+  New Global English School
+</motion.h1>
 
           <p className="text-gray-300 mt-6 text-lg">
             Building Bright Futures For Your Child Through Quality Education,

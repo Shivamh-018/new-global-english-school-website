@@ -4,7 +4,10 @@ import About from "./components/About";
 import Facilities from "./components/Facilities";
 import Contact from "./components/Contact";
 import WhatsAppButton from "./components/WhatsAppButton";
+import Gallery from "./components/Gallery";
+import AdmissionForm from "./components/AdmissionForm";
 import Footer from "./components/Footer";
+
 function App() {
   return (
     <div className="min-h-screen bg-slate-950">
@@ -14,7 +17,10 @@ function App() {
       <Facilities />
       <Contact />
       <WhatsAppButton />
+      <Gallery />
+       <AdmissionForm  />
       <Footer />
+     
     </div>
   );
 }
