@@ -1,4 +1,49 @@
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 function AdmissionForm() {
+  const [formData, setFormData] = useState({
+    student_name: "",
+    parent_name: "",
+    mobile: "",
+    student_class: "Nursery",
+    address: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_elk2u8e",
+        "template_vg699pr",
+        formData,
+        "Dd0cCh2Em-PiYcAsX"
+      )
+      .then(() => {
+        alert("Admission Form Submitted Successfully!");
+
+        setFormData({
+          student_name: "",
+          parent_name: "",
+          mobile: "",
+          student_class: "Nursery",
+          address: "",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Failed to send form.");
+      });
+  };
+
   return (
     <section className="bg-blue-50 py-20">
       <div className="max-w-4xl mx-auto px-6">
@@ -11,7 +56,10 @@ function AdmissionForm() {
           Admissions Open for Nursery, LKG and UKG
         </p>
 
-        <form className="bg-white p-8 rounded-xl shadow-lg mt-10">
+        <form
+          onSubmit={sendEmail}
+          className="bg-white p-8 rounded-xl shadow-lg mt-10"
+        >
 
           <div className="mb-4">
             <label className="block font-semibold mb-2">
@@ -20,8 +68,12 @@ function AdmissionForm() {
 
             <input
               type="text"
+              name="student_name"
+              value={formData.student_name}
+              onChange={handleChange}
               placeholder="Enter Student Name"
               className="w-full border p-3 rounded-lg"
+              required
             />
           </div>
 
@@ -32,8 +84,12 @@ function AdmissionForm() {
 
             <input
               type="text"
+              name="parent_name"
+              value={formData.parent_name}
+              onChange={handleChange}
               placeholder="Enter Parent Name"
               className="w-full border p-3 rounded-lg"
+              required
             />
           </div>
 
@@ -44,8 +100,12 @@ function AdmissionForm() {
 
             <input
               type="tel"
+              name="mobile"
+              value={formData.mobile}
+              onChange={handleChange}
               placeholder="Enter Mobile Number"
               className="w-full border p-3 rounded-lg"
+              required
             />
           </div>
 
@@ -54,7 +114,12 @@ function AdmissionForm() {
               Select Class
             </label>
 
-            <select className="w-full border p-3 rounded-lg">
+            <select
+              name="student_class"
+              value={formData.student_class}
+              onChange={handleChange}
+              className="w-full border p-3 rounded-lg"
+            >
               <option>Nursery</option>
               <option>LKG</option>
               <option>UKG</option>
@@ -68,9 +133,13 @@ function AdmissionForm() {
 
             <textarea
               rows="4"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
               placeholder="Enter Address"
               className="w-full border p-3 rounded-lg"
-            ></textarea>
+              required
+            />
           </div>
 
           <button
