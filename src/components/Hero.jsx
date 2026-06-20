@@ -4,7 +4,7 @@ import heroImage from "../assets/hero.jpg";
 
 function Hero() {
   return (
-    <section id="home" className="max-w-7xl mx-auto px-6 pt-32 pb-16">
+    <section id="home" className="max-w-7xl mx-auto px-6 pt-20 pb-16">
 
       <div className="grid md:grid-cols-2 gap-10 items-center">
 
