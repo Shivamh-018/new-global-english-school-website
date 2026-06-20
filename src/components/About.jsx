@@ -8,7 +8,7 @@ function About() {
         </h2>
 
         <p className="text-center text-gray-600 mt-4 max-w-3xl mx-auto">
-          Global English School, Kurula is committed to providing
+          New Global English School, Kurula is committed to providing
           quality education, experienced teachers and a safe
           learning environment for every child.
         </p>
