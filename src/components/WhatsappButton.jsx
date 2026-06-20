@@ -1,4 +1,4 @@
-function WhatsappButton() {
+function WhatsAppButton() {
   return (
     <a
       href="https://wa.me/919370671599"
@@ -11,4 +11,4 @@ function WhatsappButton() {
   );
 }
 
-export default WhatsappButton;
+export default WhatsAppButton;
