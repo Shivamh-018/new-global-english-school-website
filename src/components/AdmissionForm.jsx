@@ -45,7 +45,7 @@ function AdmissionForm() {
   };
 
   return (
-    <section className="bg-blue-50 py-20">
+    <section   id="admission" className="bg-blue-50 py-20">
       <div className="max-w-4xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center text-blue-900">

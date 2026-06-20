@@ -4,7 +4,7 @@ import heroImage from "../assets/hero.jpg";
 
 function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-6 pt-32 pb-16">
+    <section id="home" className="max-w-7xl mx-auto px-6 pt-32 pb-16">
 
       <div className="grid md:grid-cols-2 gap-10 items-center">
 
@@ -29,17 +29,23 @@ function Hero() {
             Safe Environment and Modern Learning Methods.
           </p>
 
-          <div className="mt-8 flex gap-4">
+         <div className="mt-8 flex gap-4">
 
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg">
-              Apply Now
-            </button>
+  <a
+    href="#admission"
+    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
+  >
+    Apply Now
+  </a>
 
-            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg">
-              Contact Us
-            </button>
+  <a
+    href="#contact"
+    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg"
+  >
+    Contact Us
+  </a>
 
-          </div>
+</div>
 
         </div>
 
