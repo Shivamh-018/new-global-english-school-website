@@ -1,3 +1,4 @@
+import logo from "../assets/logo.png";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -15,7 +16,14 @@ function Navbar() {
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
           {/* Logo + School Name */}
+          
           <div className="flex items-center gap-3">
+
+             <img
+    src={logo}
+    alt="School Logo"
+    className="w-12 h-12 rounded-full"
+  />
             <h1 className="text-xl md:text-2xl font-bold">
               New Global English School
             </h1>

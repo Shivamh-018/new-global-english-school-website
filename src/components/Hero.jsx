@@ -1,67 +1,90 @@
 import { motion } from "framer-motion";
 import heroImage from "../assets/hero.jpg";
 
-
 function Hero() {
   return (
-    <section id="home" className="max-w-7xl mx-auto px-6 pt-20 pb-16">
-
+    <section
+      id="home"
+      className="relative overflow-hidden max-w-7xl mx-auto px-6 pt-20 pb-16"
+    >
+     
       <div className="grid md:grid-cols-2 gap-10 items-center">
 
         {/* Left Side */}
         <div>
 
-          <span className="bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold">
+          <span className="bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold shadow-lg">
             Admissions Open 2026-27
           </span>
 
           <motion.h1
-  initial={{ opacity: 0, x: -100 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 1 }}
-  className="text-5xl md:text-6xl font-bold text-white mt-6"
->
-  New Global English School
-</motion.h1>
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-4xl md:text-7xl font-extrabold text-white mt-6 leading-tight"
+          >
+            New Global <br />
+            <span className="text-yellow-400">
+              English School
+            </span>
+          </motion.h1>
 
-          <p className="text-gray-300 mt-6 text-lg">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="text-gray-300 mt-6 text-lg"
+          >
             Building Bright Futures For Your Child Through Quality Education,
             Safe Environment and Modern Learning Methods.
-          </p>
+          </motion.p>
 
-         <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
 
-  <a
-    href="#admission"
-    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
-  >
-    Apply Now
-  </a>
+            <a
+              href="#admission"
+              className="bg-blue-400 text-black px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition duration-300"
+            >
+              Apply Now 🚀
+            </a>
 
-  <a
-    href="#contact"
-    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg"
-  >
-    Contact Us
-  </a>
+            <a
+              href="#contact"
+              className="bg-green-500 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition duration-300"
+            >
+              Contact Us 📞
+            </a>
 
-</div>
+          </div>
 
         </div>
 
         {/* Right Side */}
         <div>
 
-          <img
-            src={heroImage}
-            alt="School"
-            className="rounded-2xl shadow-2xl"
-          />
+          <motion.img
+  src={heroImage}
+  alt="School"
+  className="rounded-3xl shadow-2xl"
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{
+    opacity: 1,
+    scale: 1,
+    y: [0, -8, 0],
+  }}
+  transition={{
+    duration: 1,
+    y: {
+      repeat: Infinity,
+      duration: 4,
+    },
+  }}
+/>
 
+         
         </div>
 
       </div>
-
     </section>
   );
 }

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const galleryImages = [
   {
     title: "Nursery Learning",
@@ -33,32 +35,60 @@ const galleryImages = [
 
 function Gallery() {
   return (
-    <section id="gallery" className="bg-white py-20">
+    <section
+      id="gallery"
+      className="py-20 bg-gradient-to-b from-white to-blue-50"
+    >
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-blue-900">
-          School Gallery
-        </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold text-center text-blue-900"
+        >
+          School Gallery
+        </motion.h2>
+
+        <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
+          Explore our learning environment, classroom activities,
+          playground fun and memorable school moments.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8 mt-14">
+
           {galleryImages.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+              whileHover={{
+                y: -8,
+              }}
+              className="group relative overflow-hidden rounded-3xl shadow-lg"
             >
+
               <img
                 src={item.image}
                 alt={item.title}
-                className="h-64 w-full object-cover"
+                className="h-72 w-full object-cover transition duration-500 group-hover:scale-110"
               />
 
-              <div className="p-4">
-                <h3 className="font-semibold text-lg">
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition duration-300"></div>
+
+              {/* Title */}
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+
+                <h3 className="text-white text-xl font-bold">
                   {item.title}
                 </h3>
+
               </div>
-            </div>
+
+            </motion.div>
           ))}
+
         </div>
+
       </div>
     </section>
   );
