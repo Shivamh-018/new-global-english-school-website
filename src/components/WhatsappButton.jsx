@@ -3,8 +3,8 @@ import { FaWhatsapp } from "react-icons/fa";
 function WhatsappButton() {
   const message = encodeURIComponent(
   `*नमस्कार 👋*
-मला माझ्या मुलाच्या *New Global English School* मधील प्रवेशाबाबत माहिती हवी आहे.
-कृपया प्रवेश प्रक्रिया व फीची माहिती पाठवा.
+*मला माझ्या पाल्याच्या प्रवेशाबाबत माहिती हवी आहे.*
+*कृपया प्रवेश प्रक्रिया व फीची माहिती पाठवा.*
 *धन्यवाद...🙏*`
 );
   return (
