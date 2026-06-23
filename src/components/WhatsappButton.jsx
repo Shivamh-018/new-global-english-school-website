@@ -1,16 +1,32 @@
 import { FaWhatsapp } from "react-icons/fa";
 
-function WhatsAppButton() {
+function WhatsappButton() {
+  const message = encodeURIComponent(
+    `Hello New Global English School,
+
+I would like to get admission information for my child.
+
+Student Name:
+Class Interested:
+Parent Name:
+Mobile Number:
+
+Please share admission details and fee structure.
+
+Thank You.`
+  );
+
   return (
     <a
-      href="https://wa.me/918805425262"
+      href={`https://wa.me/919370671599?text=${message}`}
       target="_blank"
-      rel="noreferrer"
-      className="fixed bottom-5 right-5 bg-green-500 w-16 h-16 rounded-full flex items-center justify-center text-white text-4xl shadow-xl hover:scale-110 transition z-50"
+      rel="noopener noreferrer"
+      className="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-50"
     >
-      <FaWhatsapp />
+      <FaWhatsapp size={30} />
+      
     </a>
   );
 }
 
-export default WhatsAppButton;
+export default WhatsappButton;
