@@ -2,20 +2,14 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function WhatsappButton() {
   const message = encodeURIComponent(
-    `Hello New Global English School,
+  `नमस्कार 👋
 
-I would like to get admission information for my child.
+मला माझ्या मुलाच्या New Global English School मधील प्रवेशाबाबत माहिती हवी आहे.
 
-Student Name:
-Class Interested:
-Parent Name:
-Mobile Number:
+कृपया प्रवेश प्रक्रिया व फीची माहिती पाठवा.
 
-Please share admission details and fee structure.
-
-Thank You.`
-  );
-
+धन्यवाद 🙏`
+);
   return (
     <a
       href={`https://wa.me/919370671599?text=${message}`}
